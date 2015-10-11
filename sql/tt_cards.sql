@@ -45,7 +45,7 @@ INSERT INTO `tt_cards` VALUES ('7', 'Gesper', '1', '1', '5', '4', '0', '1', '007
 INSERT INTO `tt_cards` VALUES ('8', 'Fastitocalon-F', '3', '1', '5', '2', '1', '1', '008.png');
 INSERT INTO `tt_cards` VALUES ('9', 'Blood Soul', '2', '1', '1', '6', '0', '1', '009.png');
 INSERT INTO `tt_cards` VALUES ('10', 'Caterchipillar', '4', '3', '2', '4', '0', '1', '010.png');
-INSERT INTO `tt_cards` VALUES ('11', 'Cockatr4', '2', '6', '1', '2', '6', '1', '011.png');
+INSERT INTO `tt_cards` VALUES ('11', 'Cockatrice', '2', '6', '1', '2', '6', '1', '011.png');
 INSERT INTO `tt_cards` VALUES ('12', 'Grat', '7', '1', '1', '3', '0', '2', '012.png');
 INSERT INTO `tt_cards` VALUES ('13', 'Buel', '6', '3', '2', '2', '0', '2', '013.png');
 INSERT INTO `tt_cards` VALUES ('14', 'Mesmerize', '5', '4', '3', '3', '0', '2', '014.png');
