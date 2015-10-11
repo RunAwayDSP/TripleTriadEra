@@ -87,7 +87,7 @@ $ischar = "SELECT * from chars where charid='$charid'"  or die("Error in the con
 $ischar1 = $db1->query($ischar) or die("Error " . mysqli_error($db1));
 $ischar2 = mysqli_fetch_array($ischar1);
 
-$sql = "SELECT charid, SUM(quantity) FROM tt_char_cards GROUP BY charid";
+$sql = "SELECT charid, SUM(quantity) FROM tt_char_cards where charid='$charid' GROUP BY charid";
 $res = $db1->query($sql) or die("Error " . mysqli_error($db1));
 $row = mysqli_fetch_array($res);
 $deck=$row['SUM(quantity)'];			
