@@ -36,6 +36,7 @@ CREATE TABLE `tt_matches` (
   `card8` int(4) DEFAULT '0',
   `card9` int(4) DEFAULT '0',
   `card10` int(4) DEFAULT '0',
+  `status` int(1) DEFAULT '0',
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 

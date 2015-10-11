@@ -54,6 +54,12 @@ switch (strtolower($menu))
 case 'deck':
 $display = 'deck.php';
 break;
+case 'lobby':
+$display = 'lobby.php';
+break;
+case 'stats':
+$display = 'stats.php';
+break;
 default:
 $display = 'home.php';
 break;
@@ -89,7 +95,11 @@ if(!$deck){
 $deck=0;
 }
 
-print "Welcome $ischar2[charname]<br><a href=?d=deck>View Deck ($deck)</a>";
+print "Player: ";
+char_name($charid);
+print "<hr>";
+
+print "<center><a href=?d=home>Home</a> -- <a href=?d=deck>View Deck ($deck)</a> -- <a href=?d=stats>View Stats</a> -- <a href=?d=lobby>Game Lobby</a> -- <a href=?logout>Log Out</a><hr>";
 
 // Add level 1 cards to deck if deck is below 5 cards //
 if($deck<=4){

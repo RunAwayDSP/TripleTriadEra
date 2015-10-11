@@ -2,7 +2,7 @@
 
 function add_cards($charid,$first,$last)
 {
-require_once 'config.php';
+require 'config.php';
 //Adding first through last cards to deck//
 for ($i = $first; $i <= $last; $i++) {
 
@@ -20,5 +20,37 @@ $result = $db1->query($query) or die("Error " . mysqli_error($db1));
 }
 }
 }
+
+function char_name($id){
+require 'config.php';
+$char = "SELECT * from chars where charid='$id'"  or die("Error in the consult.." . mysqli_error($db1)); 
+$char1 = $db1->query($char) or die("Error " . mysqli_error($db1));
+$char2 = mysqli_fetch_array($char1);
+if($char2[charid]==$id){
+
+	print "$char2[charname]";
+}
+}
+
+function matches($status)
+{
+require 'config.php';
+//Get Matches//
+$is = "SELECT * from tt_matches where status='$status' order by ID desc"  or die("Error in the consult.." . mysqli_error($db1)); 
+$is1 = $db1->query($is) or die("Error " . mysqli_error($db1));
+while($is2 = mysqli_fetch_array($is1)){
+
+
+
+print "<tr><td>$is2[ID]</td><td>";
+char_name($is2[char1]);
+print "</td><td>";
+char_name($is2[char2]);
+print"</td></tr>";	
+}
+
+
+}
+
 
 ?>

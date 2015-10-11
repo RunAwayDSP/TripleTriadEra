@@ -1,3 +1,4 @@
+<h1>Your Deck</h1>
 <?
 print "<table width=100%><tr><td></td><td>Card</td><td>Name</td><td>Element</td><td>Level</td><td>Quantity</td></tr>";
 $is = "SELECT * from tt_char_cards where charid='$charid' order by cardid"  or die("Error in the consult.." . mysqli_error($db1)); 
