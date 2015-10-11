@@ -43,6 +43,24 @@ $_SESSION['triplet']=$charid;
 }
 
 
+//Display Switch//
+$menu = isset( $_GET['d'] ) ? $_GET['d'] : 'home';
+if (!isset( $menu )) { $menu = 'home'; }
+    
+//Display//
+$display = 'home.php';
+switch (strtolower($menu))
+{
+case 'deck':
+$display = 'deck.php';
+break;
+default:
+$display = 'home.php';
+break;
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -71,17 +89,14 @@ if(!$deck){
 $deck=0;
 }
 
-print "Welcome $ischar2[charname]<br><a href=?deck>View Deck ($deck)</a>";
-
+print "Welcome $ischar2[charname]<br><a href=?d=deck>View Deck ($deck)</a>";
 
 // Add level 1 cards to deck if deck is below 5 cards //
 if($deck<=4){
 add_cards($charid,1,11);
 }
-// View Deck //
-if(isset($_GET['deck'])){
-include_once 'deck.php';
-}
+//display
+require_once ($display);
 		
 }
   ?>
