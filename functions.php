@@ -35,18 +35,21 @@ if($char2[charid]==$id){
 function matches($status)
 {
 require 'config.php';
+require 'arrays.php';
 //Get Matches//
 $is = "SELECT * from tt_matches where status='$status' order by ID desc"  or die("Error in the consult.." . mysqli_error($db1)); 
 $is1 = $db1->query($is) or die("Error " . mysqli_error($db1));
 while($is2 = mysqli_fetch_array($is1)){
 
-
-
 print "<tr><td>$is2[ID]</td><td>";
 char_name($is2[char1]);
 print "</td><td>";
 char_name($is2[char2]);
-print"</td></tr>";	
+$gain=$is2['gain'];
+$rules=$is2['rules'];
+$special=$is2['special'];
+print "</td><td>$gain_array[$gain]</td><td>$rules_array[$rules]</td><td>$special_array[$special]</td>";
+print "<td></td></tr>";	
 }
 
 

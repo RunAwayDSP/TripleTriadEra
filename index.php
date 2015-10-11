@@ -5,6 +5,7 @@ error_reporting(0);
 session_start();
 require_once 'config.php';
 include_once 'functions.php';
+include_once 'arrays.php';
 
 if(isset($_GET['logout'])){
 session_unset();
@@ -59,6 +60,15 @@ $display = 'lobby.php';
 break;
 case 'stats':
 $display = 'stats.php';
+break;
+case 'create':
+$display = 'create.php';
+break;
+case 'active':
+$display = 'active.php';
+break;
+case 'finished':
+$display = 'finished.php';
 break;
 default:
 $display = 'home.php';

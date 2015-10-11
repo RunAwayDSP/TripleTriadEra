@@ -9,17 +9,7 @@ $cards = "SELECT * from tt_cards where ID='$is2[cardid]'"  or die("Error in the 
 $cards1 = $db1->query($cards) or die("Error " . mysqli_error($db1));
 $cards2 = mysqli_fetch_array($cards1);	
 $element=$cards2['element'];
-$element_array= array(
-0=>Nuetral,
-1=>Earth,
-2=>Fire,
-3=>Holy,
-4=>Ice,
-5=>Poison,
-6=>Thunder,
-7=>Water,
-8=>Wind
-);
+
 if($cards2[top]==10){
 $cards2[top]=A;
 }
