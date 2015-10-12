@@ -8,14 +8,14 @@ $gain_array= array(
 );
 
 $rules_array= array(
-0=>'Random Deck',
-1=>Open,
-2=>Same,
-3=>Plus,
-4=>Elemental,
-5=>Combo,
-6=>'Same Wall',
-7=>Deathmatch
+1=>'Random Deck',
+2=>Open,
+4=>Same,
+8=>Plus,
+16=>Elemental,
+32=>Combo,
+64=>'Same Wall',
+128=>Deathmatch
 );
 
 $special_array= array(

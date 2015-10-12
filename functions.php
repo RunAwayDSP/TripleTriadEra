@@ -48,11 +48,32 @@ char_name($is2[char2]);
 $gain=$is2['gain'];
 $rules=$is2['rules'];
 $special=$is2['special'];
-print "</td><td>$gain_array[$gain]</td><td>$rules_array[$rules]</td><td>$special_array[$special]</td>";
+
+print "</td><td>$gain_array[$gain]</td><td>";
+   $x=$rules;
+
+    $n = 1 ;
+    while ( $x > 0 ) {
+        if ( $x & 1 == 1 ) {
+            echo $rules_array[$n], "<br>" ;
+        }
+        $n *= 2 ;
+        $x >>= 1 ;
+    }
+
+
+print "</td><td>$special_array[$special]</td>";
 print "<td></td></tr>";	
 }
 
 
+}
+
+function extract_numbers($string)
+{
+preg_match_all('/([\d]+)/', $string, $match);
+ 
+return $match[0];
 }
 
 
